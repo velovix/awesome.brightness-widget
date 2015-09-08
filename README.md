@@ -34,13 +34,20 @@ if you think you're special.
 	```
 	brightness = brightness_widget:new({})
 	```
-5. Finally, to add your widget to the bar, you'll have to add the following line somewhere after the `right_layout`
+5. Add the following lines near where other similar key bindings are being made in the rc.lua. This will allow you to
+control brightness with your brightness keys on your keyboard.
+
+	```
+	awful.key({}, "XF86MonBrightnessDown", function() brightness:down() end),
+	awful.key({}, "XF86MonBrightnessUp", function() brightness:up() end),
+	```
+6. Finally, to add your widget to the bar, you'll have to add the following line somewhere after the `right_layout`
 table is created.
 
 	```
 	right_layout:add(brightness.widget)
 	```
-6. Restart Awesome WM and you're finished! You should see a white brightness icon on the top right of the screen!
+7. Restart Awesome WM and you're finished! You should see a white brightness icon on the top right of the screen!
 
 ###Configuration
 For most cases, the default configuration will work fine. Unless you know for sure that you're different, you should
