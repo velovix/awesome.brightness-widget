@@ -32,7 +32,7 @@ empty table sets all configurations to their defaults. This should work for most
 if you think you're special.
 
 	```
-	brightness = brightness_widget:new({})
+	local brightness = brightness_widget:new({})
 	```
 5. Add the following lines near where other similar key bindings are being made in the rc.lua. This will allow you to
 control brightness with your brightness keys on your keyboard.
@@ -61,6 +61,6 @@ provided. Feed them into your `new` function instead of the default empty table.
 - **dec**: The flag that should be passed to the program to signal that we're decrementing brightness. The default is
 `-dec`.
 - **set**: The flag that should be passed to the program to signal that we're setting brightness. The default is
-`-dec`.
+`-set`.
 - **get**: The flag that should be passed to the program to signal that we're getting brightness. The default is
 `-get`.
