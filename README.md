@@ -3,11 +3,11 @@ Provides a simple brightness widget for the Awesome window manager. It displays 
 allows you to adjust the brightness when you press the brightness up and down buttons on your keyboard, if you have
 them.
 
-###Dependencies
+### Dependencies
 No extra Awesome libraries are required, but the widget does use the `xbacklight` command, so that or an equivalent
 program of a different name must be installed. If it isn't `xbacklight`, you'll have to do some configuration.
 
-###Setup
+### Setup
 1. Navigate to your Awesome config directory (usually `~/.config/awesome`) and clone this repository with the following
 command:
 
@@ -49,7 +49,7 @@ table is created.
 	```
 7. Restart Awesome WM and you're finished! You should see a white brightness icon on the top right of the screen!
 
-###Configuration
+### Configuration
 For most cases, the default configuration will work fine. Unless you know for sure that you're different, you should
 try this first and see what kind of results you get. If you do need special configuration options, there are six
 provided. Feed them into your `new` function instead of the default empty table.
