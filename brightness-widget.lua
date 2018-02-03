@@ -9,6 +9,14 @@ Brightness.__index = Brightness
 
 config = awful.util.getdir("config")
 
+function Brightness:isXBacklightInstalled()
+	local prog = io.popen("xbacklight")
+	prog:read('*all')
+	local result = {prog:close()}
+
+	return result[3] == 0
+end
+
 local function run(command)
 	local prog = io.popen(command)
 	local result = prog:read('*all')
