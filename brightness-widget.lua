@@ -60,6 +60,9 @@ end
 
 function Brightness:update(status)
 	local b = self:getBrightness()
+        if b == nil then
+          b = 0
+        end
 	local img = math.floor((b/100)*7)
 	self.widget:set_image(config.."/awesome.brightness-widget/icons/"..img..".png")
 end
@@ -80,7 +83,7 @@ function Brightness:set(val)
 end
 
 function Brightness:getBrightness()
-	return run(self.cmd.." "..self.get)
+	return tonumber(run(self.cmd.." "..self.get))
 end
 
 function Brightness.mt:__call(...)
